@@ -1,0 +1,28 @@
+{
+    "emails": [
+        "jo***@example.com",
+        "ja***@company.co.uk",
+        "us***@subdomain.example.org"
+    ],
+    "urls": [
+        "https://www.example.com",
+        "http://sub.domain.org/page"
+    ],
+    "phone_numbers": [
+        "(123) 456-7890",
+        "123-456-7890",
+        "123.456.7890",
+        "(555)555-5555"
+    ],
+    "hashtags": [
+        "#hello",
+        "#ThisIsAHashtag",
+        "#123",
+        "#good_tag"
+    ],
+    "credit_cards": [
+        "**** **** **** 3456",
+        "**** **** **** 3456"
+    ]
+}
+ 
