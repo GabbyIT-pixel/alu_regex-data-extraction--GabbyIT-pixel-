@@ -35,9 +35,21 @@ This keeps sensitive information safe.
 
 1. Clone the repository:
 
+```bash
+git clone https://github.com/GabbyIT-pixel/alu_regex-data-extraction--GabbyIT-pixel-.git
+```
+
 2. Go to the source folder:
 
+```bash
+cd alu_regex-data-extraction--GabbyIT-pixel-/src
+```
+
 3. Run the program:
+
+```bash
+python3 extractor.py
+```
 
 4. The program reads `../samples/input.txt` and prints a **structured JSON output**.
 
@@ -45,6 +57,41 @@ This keeps sensitive information safe.
 
 ## Sample Input (`input.txt`)
 
+```
+User emails:
+john.doe@example.com
+jane_smith@company.co.uk
+invalid@@example.com
+user.name+test@subdomain.example.org
+
+Websites:
+https://www.example.com
+http://sub.domain.org/page
+javascript:alert('XSS')
+ftp://example.com
+
+Phone numbers:
+(123) 456-7890
+123-456-7890
+123.456.7890
+1234567
+(555)555-5555
+
+Hashtags:
+#hello
+#ThisIsAHashtag
+#123
+#invalid hashtag
+#good_tag
+
+Credit cards:
+1234 5678 9012 3456
+1234-5678-9012-3456
+Invalid: 1234 5678 9012
+
+Malicious content:
+<script>alert('hack')</script>
+```
 
 ---
 
