@@ -18,7 +18,8 @@ credit_card_pattern = r"\b(?:\d{4}[- ]?){3}\d{4}\b"
 emails = re.findall(email_pattern, raw_text)
 urls = re.findall(url_pattern, raw_text)
 phones = re.findall(phone_pattern, raw_text)
-hashtags = re.findall(hashtag_pattern, raw_text)
+hashtags = [m.group() for m in re.finditer(hashtag_pattern, raw_text)
+            if m.end() == len(raw_text) or raw_text[m.end()] != ' ']
 credit_cards_raw = re.findall(credit_card_pattern, raw_text)
 
 # Step 4: Security and validation
@@ -36,7 +37,6 @@ def valid_phone(p):
     return len(digits) == 10
 
 phones = [p for p in phones if valid_phone(p)]
-hashtags = [h for h in hashtags if " " not in h]
 
 def mask_credit_card(card):
     digits = re.sub(r"\D", "", card)
